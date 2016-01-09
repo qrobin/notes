@@ -1,0 +1,104 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Блокнотик</title>
+    <meta name="description" content="microcss" />
+    <meta name="keywords" content="microcss" />
+    <link rel="stylesheet" type="text/css" href="/fonts/lato/lato.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome/font-awesome.css">
+</head>
+
+<body>
+    {{>Layout}}
+</body>
+<template name="NavPartition">
+    <li>
+        <a id="set-partition">{{title}}</a><sup class="fa fa-times" title="Удалить раздел" id="remove-partition"></sup>
+    </li>
+</template>
+<template name="NavBar">
+    <nav class="navbar">
+        <ul class="main-nav">
+            {{#each partitions}} {{>NavPartition}} {{/each}}
+            <span class="button-wrap">
+                <button id="add-partition" class="button button-primary button-circle button-small add_section">
+                    <i class="fa fa-plus"></i>
+                </button>  
+            </span>
+        </ul>
+    </nav>
+</template>
+<template name="NavChapter">
+    <li><a id="set-chapter">{{title}}</a>
+        <a id="remove-chapter"><i class="fa fa-times"></i></a>
+    </li>
+</template>
+<template name="Section">
+    <section class="aside_section">
+        <h4 class="section_title"><span id="section-title" contenteditable="{{editTitle}}">{{title}}</span>
+            <button id="remove-section" class="button button-caution button-square button-tiny">
+                <i class="fa fa-times"></i>
+            </button>
+        </h4>
+        <ul>
+            {{#each chapters}} {{>NavChapter}} {{/each}}
+        </ul>
+        <a href="#" id="add-chapter" class="button button-action button-tiny">добавить главку</a>
+    </section>
+</template>
+<template name="ChapterBlock">
+    <div class="item">
+        <h5>{{title}}</h5>
+        <p>{{content}}</p>
+        <button id="edit-block" class="button button-action button-square button-tiny"><i class="fa fa-pencil"></i>
+        </button>
+        <button id="remove-block" class="button button-caution button-square button-tiny"><i class="fa fa-times"></i>
+        </button>
+    </div>
+</template>
+<template name="Partition">
+    <h1 id="partition-title" contenteditable="{{editTitle}}">{{title}}</h1>
+    <div class="grid-spaceBetween">
+        <aside class="col-3">
+            {{#each sections}} {{>Section}} {{/each}}
+            <a id="add-section" class="button button-primary button-pill button-small">Добавить секцию</a>
+        </aside>
+        <div class="col-8">
+            {{#if chapter}}
+            <!--<p><a href="#">{{title}}</a> / <a>{{section.title}}</a> / <span>{{chapter.title}}</span></p>-->
+            <h4 id="chapter-title" contenteditable="{{editChapterTitle}}" class="chapter-title">{{chapter.title}}</h4> 
+
+
+            {{#each chapter.blocks}} {{>ChapterBlock}} {{/each}}
+
+
+            <form id="add-block-form" action="">
+                <div class="add_item">
+                    <input type="text" name="title" placeholder="Заголовок нового блока" required>
+                    <textarea name="content" id="" cols="30" rows="10" placeholder="Текст нового блока" required></textarea>
+                    <input type="submit" value="Добавить" class="button button-action button-tiny">
+                </div>
+            </form>
+            {{/if}}
+        </div>
+    </div>
+</template>
+<template name="Layout">
+    <div class="layout">
+        <div class="body">
+            <header class="main-header grid-middle-spaceBetween">
+                <div class="col-8">
+                    {{>NavBar}}
+                </div>
+                <div class="col-1">
+                    
+                </div>
+            </header>
+            <main class="main">
+                {{#if partition}} {{>Partition partition}} {{/if}}
+            </main>
+        </div>
+        <footer class="main-footer">2016 г.</footer>
+    </div>
+</template>

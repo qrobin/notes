@@ -1,0 +1,244 @@
+.form {
+    background: #EEE;
+}
+
+.form fieldset {
+    border: 1px solid #d4d4d4;
+}
+
+.form fieldset legend {
+    color: gray;
+}
+
+.form ul,
+.form li {
+    list-style: none;
+}
+
+label,
+input,
+textarea {
+    color: #666;
+    font-size: 14px;
+    font-family: Lato, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+.form-field-group {
+    margin-bottom: 14px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.form-field-group label {
+    display: block;
+    color: #4d4d4d;
+    cursor: pointer;
+    margin-bottom: 9.8px;
+}
+
+.form-field-group label.inline {
+    display: inline-block;
+}
+
+.form-field-group .form-field {
+    position: relative;
+    /* TODO
+    .form-errors {}
+    */
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 30px;
+    padding: 7px;
+    background: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075);
+    margin: 0;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+textarea:focus,
+textarea.focus,
+input[type="text"]:focus,
+input[type="text"].focus,
+input[type="password"]:focus,
+input[type="password"].focus,
+input[type="datetime"]:focus,
+input[type="datetime"].focus,
+input[type="datetime-local"]:focus,
+input[type="datetime-local"].focus,
+input[type="date"]:focus,
+input[type="date"].focus,
+input[type="month"]:focus,
+input[type="month"].focus,
+input[type="time"]:focus,
+input[type="time"].focus,
+input[type="week"]:focus,
+input[type="week"].focus,
+input[type="number"]:focus,
+input[type="number"].focus,
+input[type="email"]:focus,
+input[type="email"].focus,
+input[type="url"]:focus,
+input[type="url"].focus,
+input[type="search"]:focus,
+input[type="search"].focus,
+input[type="tel"]:focus,
+input[type="tel"].focus,
+input[type="color"]:focus,
+input[type="color"].focus {
+    border-color: #66afe9;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05), 0 0 5px rgba(102, 175, 233, 0.5);
+    outline: 0;
+}
+
+input[type="color"] {
+    width: 50px;
+    background: transparent;
+    border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+textarea {
+    height: auto;
+    min-width: 100%;
+    min-height: 42px;
+    padding: 7px;
+}
+
+select {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 42px;
+    font-size: 14px;
+    padding: 0 7px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select option {
+    font-size: 12px;
+}
+
+::-webkit-input-placeholder {
+    color: gray;
+    transition: 0.2s all;
+}
+
+:-moz-placeholder {
+    color: gray;
+    transition: 0.2s all;
+}
+
+::-webkit-input-placeholder:focus {
+    color: #a6a6a6;
+}
+
+:-moz-placeholder:focus {
+    color: #a6a6a6;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    margin: 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    background: #fff;
+    margin: 1em 0;
+    border: 1px solid rgba(34, 36, 38, .15);
+    box-shadow: none;
+    border-radius: .28571429rem;
+    text-align: left;
+    color: rgba(0, 0, 0, .87);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table thead {
+    box-shadow: none;
+}
+
+table thead tr:first-child>th:first-child {
+    border-radius: .28571429rem 0 0;
+}
+
+table tr td,
+table tr th {
+    border-left: 1px solid rgba(34, 36, 38, .1);
+}
+
+table thead th {
+    cursor: auto;
+    background: #f9fafb;
+    text-align: inherit;
+    color: rgba(0,0,0,.87);
+    padding: .92857143em .71428571em;
+    vertical-align: inherit;
+    font-style: none;
+    font-weight: 700;
+    text-transform: none;
+    border-bottom: 1px solid rgba(34,36,38,.1);
+    border-left: none;
+}
+
+table thead tr:first-child>th:last-child {
+    border-radius: 0 .28571429rem 0 0;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+    border-left: none;
+}
+
+table tr td,
+table tr th {
+    border-left: 1px solid rgba(34, 36, 38, .1);
+        font-size: 0.9rem;
+}
+
+table td {
+    padding: .71428571em;
+    text-align: inherit;
+}
+
+table tfoot {
+    box-shadow: none;
+}
+
+table tfoot tr:first-child>th:only-child {
+    border-radius: 0 0 .28571429rem .28571429rem;
+}
+
+table tfoot tr:first-child>th:last-child {
+    border-radius: 0 0 .28571429rem;
+}

@@ -1,0 +1,187 @@
+.layout {
+    font-family: Lato;
+    padding: 2rem 5rem 0;
+}
+
+.main-header {
+    height: 50px;
+    margin-top: 10px;
+}
+
+.main > h1 {
+    padding-top: 0;
+    border-bottom: 1px solid gray;
+}
+
+.main-footer {
+    height: 50px;
+}
+
+.main-nav {
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.main-nav a,
+.main-nav a:visited,
+.main-nav a:hover,
+.main-nav a:active {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    transition: 0.5s color ease;
+    text-decoration: none;
+    color: #000;
+    background: none;
+}
+
+.main-nav a:hover {
+    color: #1b9af7;
+}
+
+.main-nav a:after {
+    content: "";
+    transition: 0.5s all ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    bottom: -0.25em;
+    height: 2px;
+    width: 0;
+    background: #1b9af7;
+}
+
+.main-nav a:after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.main-nav a:hover:before,
+.main-nav a:hover:after {
+    width: 100%;
+}
+
+.main-nav li .fa{
+    font-size: 11px;
+    vertical-align: top;
+    line-height: 17px;
+    margin: 0 0 0 5px;
+    cursor: pointer;
+    color: darkorange;
+}
+
+.aside_section {
+    padding-bottom: 20px;
+}
+
+.aside_section:not(:first-child) {
+    border-top: 1px solid lightgray;
+}
+
+.add_section {
+    float: right;
+}
+
+
+/*
+.aside_section ul {
+    margin: 0 0 0 20px;
+}
+*/
+
+.aside_section ul {
+    margin-bottom: 5px;
+}
+
+.aside_section li {
+    list-style: none;
+    line-height: 1.2rem;
+}
+
+.aside_section li a:first-child {
+    display: inline-block;
+    width: 70.5%;
+    line-height: 1;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.aside_section li a:first-child:hover {
+    text-decoration: underline;
+}
+
+.aside_section ul + .button-action {
+    color: #000;
+}
+
+.aside_section li a + a {
+    cursor: pointer;
+    margin: 0 0 0 30px;
+    color: coral;
+    vertical-align: top;
+}
+
+.item:not(:first-child) {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+}
+
+.section_title {
+    color: deeppink;
+}
+
+.section_title button {
+    float: right;
+    vertical-align: middle;
+}
+
+.add_item input[type="text"] {
+    width: 90%;
+    margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+.section_title span,
+h4 {
+    outline: none;
+}
+
+.section_title span{
+    font-size: 0.9rem;
+}
+
+h1:focus,
+h2:focus,
+h3:focus,
+.section_title:focus span,
+h4:focus {
+    background-color: gold;
+    border: none;
+    margin-bottom: 7px;
+}
+
+.chapter-title {
+    color: deepskyblue;
+    margin-bottom: 1rem;
+}
+
+.item{
+    margin: 0 0 15px;
+}
+.item p{
+    margin: 0 0 10px;
+}
